@@ -134,14 +134,15 @@ Ajusta el collider:
 Usa la vista lateral y ajusta para cubrir el cuerpo.
 <img width="452" height="345" alt="image" src="https://github.com/user-attachments/assets/f8f92cf7-19a3-42c6-bbeb-ed23013916f1" />
 
-En el RigidBody → Freeze Rotation (X, Y, Z) ✅.
+En el RigidBody → Freeze Rotation (X, Y, Z).
+
 <img width="466" height="385" alt="image" src="https://github.com/user-attachments/assets/617eab31-e819-4415-b6a4-19ee361af9db" />
 
 PASO 9: Crear el script de movimiento
 
 En la carpeta Scripts:
 
-Clic derecho → Create → C# Script → PlayerMove.cs.
+Clic derecho → Create → C# Script → Player.cs
 
 Arrastra el script al objeto Player.
 
@@ -178,32 +179,35 @@ public class PlayerMove : MonoBehaviour
 
 
 Guarda (Ctrl + S) y vuelve a Unity.
+<img width="1022" height="801" alt="image" src="https://github.com/user-attachments/assets/fb82719b-f095-4d08-8ee1-ff9b94b85bdc" />
+<img width="455" height="258" alt="image" src="https://github.com/user-attachments/assets/ce14463f-ce69-4e9f-aa51-2c6ba50f6bc7" />
 
-🔹 PASO 10: Crear el Animation Controller
+
+PASO 10: Crear el Animation Controller
 
 En carpeta Animations:
 
-Clic derecho → Create → Animator Controller → AnimationPlayer.controller.
+° Clic derecho → Create → Animator Controller → AnimationPlayer.controller
+<img width="889" height="375" alt="image" src="https://github.com/user-attachments/assets/d4e812e4-3e2c-4ff3-b0fd-a4cbaa689077" />
 
-Abre el Animator (Window → Animation → Animator).
-
-Clic derecho → Create State → From New Blend Tree.
-
-Doble clic sobre el BlendTree.
+° Abre el Animator (Window → Animation → Animator).
+° Clic derecho → Create State → From New Blend Tree.
+<img width="1118" height="541" alt="image" src="https://github.com/user-attachments/assets/70568118-57b6-4869-9649-6d1b8a1cdc63" />
+° Doble clic sobre el BlendTree.
 
 🔹 PASO 11: Configurar el Blend Tree
 
 En el Inspector:
 
 Blend Type: 2D Freeform Directional.
+<img width="460" height="226" alt="image" src="https://github.com/user-attachments/assets/b067c280-81a1-4dce-918f-3d833de74d4c" />
 
 En Parameters, crea dos variables tipo Float:
-
 VelX
-
 VelY
 
 Asigna al BlendTree los parámetros VelX y VelY.
+<img width="1732" height="542" alt="image" src="https://github.com/user-attachments/assets/2f069737-e0e8-4d83-987e-743abe58e0ce" />
 
 En Motions, añade 7 animaciones (Add Motion Field 7 times).
 
@@ -217,49 +221,42 @@ Asigna posiciones:
 (1,1) → Running (Mirror ✅)
 (-1,-1) → Running
 
-
 Activa Mirror donde sea necesario para invertir el movimiento.
+<img width="449" height="308" alt="image" src="https://github.com/user-attachments/assets/13be68fc-f396-4551-be44-8489ab7904a5" />
 
-🔹 PASO 12: Asignar Animation Controller
+PASO 12: Asignar Animation Controller
 
 Selecciona el objeto Player.
-
 En el componente Animator, arrastra el AnimationPlayer.controller al campo Controller.
-
 Arrastra también el Animator del Player al campo Animator del script PlayerMove.
+<img width="461" height="579" alt="image" src="https://github.com/user-attachments/assets/c2dafdce-b0cc-4679-a971-d1262c3b3816" />
 
-🔹 PASO 13: Ajustar cámara
+PASO 13: Ajustar cámara
 
 Crea un objeto Main Camera si no existe.
-
 Posiciónala detrás del Player.
-
 Arrastra la cámara dentro del objeto Player (para que lo siga al moverse).
+<img width="428" height="230" alt="image" src="https://github.com/user-attachments/assets/2c684121-6103-48de-a23a-8ed30033a2e6" />
 
-🔹 PASO 14: Corrección de texturas transparentes (si ocurre)
+PASO 14: Corrección de texturas transparentes (si ocurre)
 
 Si tu modelo se ve transparente:
-
 En el Project, busca el Material del personaje.
-
 Presiona Ctrl + D para duplicarlo.
-
 En el material duplicado → cambia:
-
 Rendering Mode: Opaque
-
 Asigna este material nuevo al Skinned Mesh Renderer del Player.
 
 🟢 PRUEBA FINAL
 
 Pulsa Play ▶️
-
 Usa W / S para moverte adelante / atrás.
-
 Usa A / D para girar.
 
 Verás cómo el personaje:
-
+Se anima con Idle al estar quieto.
+Corre con Running.
+Gira con Left/Right.
 Se anima con Idle al estar quieto.
 
 Corre con Running.
