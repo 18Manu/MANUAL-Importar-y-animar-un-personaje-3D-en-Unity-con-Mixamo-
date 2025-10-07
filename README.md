@@ -65,80 +65,79 @@ En la ventana Project, crea carpetas:
 ° Animations
 ° Textures
 ° Scripts
+<img width="804" height="388" alt="image" src="https://github.com/user-attachments/assets/0113b81a-062a-4358-976f-7e292a5d7d51" />
 
 Abre las carpetas del proyecto (clic derecho → Show in Explorer).
 
-🔹 PASO 4: Importar archivos
+PASO 4: Importar archivos
 
 Extrae las texturas del archivo .zip dentro de la carpeta Textures.
+<img width="1031" height="313" alt="image" src="https://github.com/user-attachments/assets/911458bd-198e-4bed-9b55-07fbfeb241b9" />
 
 Arrastra a Animations los archivos:
-
 - Personaje_Unity.fbx
 - Idle.fbx
 - Running.fbx
 - LeftStrafeWalk.fbx
-
+<img width="1033" height="315" alt="image" src="https://github.com/user-attachments/assets/e77acbe8-6cea-4446-b684-1b8b9fc31ee8" />
 
 Espera a que Unity genere los archivos .meta.
+<img width="540" height="437" alt="image" src="https://github.com/user-attachments/assets/48716144-1ede-45aa-9911-fcd11e4d2820" />
 
 Si aparece el mensaje Fix Now de Normal Maps → haz clic en Fix Now.
 
-🔹 PASO 5: Configurar tipo de animación y esqueleto
+
+PASO 5: Configurar tipo de animación y esqueleto
 
 Selecciona todos los .fbx (Idle, Running, Left) excepto el modelo principal.
 
 En el panel Inspector → Rig:
-
 Animation Type: Humanoid
-
 Avatar Definition: Copy From Other Avatar
-
 Source: arrastra el modelo principal (Personaje_Unity.fbx)
+<img width="463" height="477" alt="image" src="https://github.com/user-attachments/assets/0b2c5f30-bb7f-41ef-ab55-e566b003176d" />
 
 Pulsa Apply.
 
-🔹 PASO 6: Ajustar bucle y pose de animaciones
+PASO 6: Ajustar bucle y pose de animaciones
 
 Selecciona cada animación (Idle, Running, Left).
 
 En la pestaña Animation:
 
 Activa Loop Time.
-
 Marca Bake Into Pose en Root Transform Rotation, Position (Y), y Position (XZ).
-
 En Based Upon, elige Original.
-
 Haz clic en Apply en cada una.
+<img width="453" height="673" alt="image" src="https://github.com/user-attachments/assets/3602c8a4-07ea-445d-a2e8-fe00fec828a3" />
 
-🔹 PASO 7: Agregar personaje a la escena
+PASO 7: Agregar personaje a la escena
 
 Arrastra el archivo Personaje_Unity.fbx a la vista Scene.
-
 Crea un suelo:
-
 Clic derecho → 3D Object → Plane.
-
 En el Inspector → Reset Transform.
+<img width="1918" height="581" alt="image" src="https://github.com/user-attachments/assets/c785d2c9-6bae-4b65-95fb-5d60d251b31e" />
 
 Cambia el nombre del personaje a Player.
+<img width="454" height="543" alt="image" src="https://github.com/user-attachments/assets/3c78f16b-b073-4bad-9972-14f1edb80d31" />
 
-🔹 PASO 8: Agregar componentes de física
+PASO 8: Agregar componentes de física
 
 Con el objeto Player seleccionado:
 
 Añade componente RigidBody.
-
 Añade componente Capsule Collider.
+<img width="461" height="672" alt="image" src="https://github.com/user-attachments/assets/36eb0883-0fc5-40d7-88ba-2e24b19b12bc" />
 
 Ajusta el collider:
-
 Usa la vista lateral y ajusta para cubrir el cuerpo.
+<img width="452" height="345" alt="image" src="https://github.com/user-attachments/assets/f8f92cf7-19a3-42c6-bbeb-ed23013916f1" />
 
 En el RigidBody → Freeze Rotation (X, Y, Z) ✅.
+<img width="466" height="385" alt="image" src="https://github.com/user-attachments/assets/617eab31-e819-4415-b6a4-19ee361af9db" />
 
-🔹 PASO 9: Crear el script de movimiento
+PASO 9: Crear el script de movimiento
 
 En la carpeta Scripts:
 
